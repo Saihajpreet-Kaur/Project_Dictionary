@@ -9,9 +9,6 @@
 - ⚠️ **Error Handling**: User-friendly messages when a word is not found.
 
 ---
-
-
-ronit
 ## 🛠 Tech Stack
 
 - *HTML* – Structure of the app  
