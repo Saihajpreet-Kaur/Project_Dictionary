@@ -7,7 +7,7 @@
 - 🟢 **Synonyms**: View a list of words with similar meaning.
 - 🔴 **Antonyms**: View a list of words with opposite meaning.
 - ⚠️ **Error Handling**: User-friendly messages when a word is not found.
-
+....
 ---
 ## 🛠 Tech Stack
 
