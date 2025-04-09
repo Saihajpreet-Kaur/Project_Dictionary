@@ -31,7 +31,7 @@ A simple, web-based dictionary built using HTML, CSS, and JavaScript. Users can 
 2.Ranjot Kaur
 3.Ronit Khanna
 4.Om Aggarwal
-........
+
 
 💡 Future Improvements
 📚 Show example usage of the word in a sentence
