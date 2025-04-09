@@ -28,7 +28,7 @@
 2.Ranjot Kaur
 3.Ronit Khanna
 4.Om Aggarwal
-......
+........
 
 💡 Future Improvements
 📚 Show example usage of the word in a sentence
