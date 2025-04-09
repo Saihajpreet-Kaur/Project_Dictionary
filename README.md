@@ -12,3 +12,11 @@
 
 
 ronit
+## 🛠 Tech Stack
+
+- *HTML* – Structure of the app  
+- *CSS* – Styling and layout  
+- *JavaScript* – Logic and interactivity  
+- *[Free Dictionary API]* – For fetching word data
+
+---
