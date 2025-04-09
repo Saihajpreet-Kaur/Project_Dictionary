@@ -22,8 +22,20 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/dictionary-app.git
+   
 👥 Team Members
 1.Saihajpreet Kaur
 2.Ranjot Kaur
 3.Ronit Khanna
 4.Om Aggarwal
+
+💡 Future Improvements
+📚 Show example usage of the word in a sentence
+
+⭐ Allow saving favorite words (localStorage)
+
+🕓 Add search history for quick access
+
+🌙 Dark mode toggle
+
+📱 Improve responsive design for mobile devices
