@@ -1,4 +1,7 @@
-# Project_Dictionary
+
+# 📘 Dictionary App
+
+A simple, web-based dictionary built using HTML, CSS, and JavaScript. Users can search for any word to get its definition, pronunciation, synonyms, and antonyms.
 ## 🚀 Features
 
 - 🔍 **Search Functionality**: Users can search for any English word.
