@@ -22,7 +22,35 @@
 
     <!-- ====== Ronit: Search Section ====== -->
     <!-- Add search input and buttons (search, mic, history) -->
-    <!-- Add history dropdown -->
+    <!-- Add history dropdown --><!-- ====== Ronit: Search Section ====== -->
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search for a word...">
+  <div class="search-actions">
+    <button id="history-btn" aria-label="Show search history">
+      <!-- History SVG Icon -->
+    </button>
+    <button id="mic-btn" aria-label="Search by voice">
+      <!-- Mic SVG Icon -->
+    </button>
+    <button id="search-btn" aria-label="Search">
+      <!-- Search SVG Icon -->
+    </button>
+  </div>
+</div>
+
+<!-- ====== Ronit: History Dropdown ====== -->
+<div id="history-dropdown" class="history-dropdown">
+  <div class="history-header">
+    <h3>Recent Searches</h3>
+    <button id="clear-history-btn">Clear All</button>
+  </div>
+  <ul id="history-list">
+    <!-- History items will be added here dynamically -->
+  </ul>
+  <div id="empty-history" class="empty-history">
+    <p>No search history yet</p>
+  </div>
+</div>
 
 
 
