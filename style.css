@@ -21,6 +21,15 @@
   border-color: rgba(155, 135, 245, 0.5);
   box-shadow: 0 0 15px rgba(146, 113, 240, 0.2);
 }
+#search-input {
+  width: 100%;
+  background: transparent;
+  color: white;
+  padding: 1rem 1.5rem;
+  padding-right: 8rem;
+  font-size: 1rem;
+  outline: none;
+}
 
   
 ================================ 
