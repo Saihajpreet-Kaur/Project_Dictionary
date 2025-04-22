@@ -14,4 +14,7 @@ const wordContent = document.getElementById('word-content');
 const wordTitle = document.getElementById('word-title');
 const wordPhonetic = document.getElementById('word-phonetic');
 const playAudioBtn = document.getElementById('play-audio');
-
+const meaningsContainer = document.getElementById('meanings-container');
+const sourceSection = document.getElementById('source-section');
+const sourceUrl = document.getElementById('source-url');
+const sourceText = document.getElementById('source-text');
