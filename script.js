@@ -18,3 +18,6 @@ const meaningsContainer = document.getElementById('meanings-container');
 const sourceSection = document.getElementById('source-section');
 const sourceUrl = document.getElementById('source-url');
 const sourceText = document.getElementById('source-text');
+// Global variables
+let currentAudio = null;
+let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
