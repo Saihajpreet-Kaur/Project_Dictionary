@@ -1,1 +1,53 @@
+/* ===============================
+   OM
+================================ */
+
+ ===============================
+
+.search-container {
+  position: relative;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.search-container:focus-within {
+  border-color: rgba(155, 135, 245, 0.5);
+  box-shadow: 0 0 15px rgba(146, 113, 240, 0.2);
+}
+#search-input {
+  width: 100%;
+  background: transparent;
+  color: white;
+  padding: 1rem 1.5rem;
+  padding-right: 8rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+  
+================================ 
+
+/* ===============================
+    Ranjot
+================================ */
+
+ ===============================
+.word-content {
+  display: none;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  overflow: hiddxen;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+================================ */
 
