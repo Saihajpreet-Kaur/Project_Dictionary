@@ -50,6 +50,11 @@
   justify-content: center;
   transition: all 0.2s ease;
 }
+.search-actions button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
   
 ================================ 
 
