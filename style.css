@@ -165,7 +165,8 @@
 }
 .play-button {
   display: flex;
-  align-item: center;
+
+  align-items: center;
   justify-content: center;
   background: linear-gradient(to right, var(--primary), #d946ef);
   color: white;
