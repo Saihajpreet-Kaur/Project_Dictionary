@@ -5,7 +5,7 @@
  ===============================
 
 .search-container {
-  posittion: relative;
+  position: relative;
   margin-bottom: 2rem;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.3);
@@ -34,11 +34,108 @@
   
 ================================ 
 
-/* ===============================
-    Ranjot
-================================ */
+===============================
+.loading-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
 
-/* ===============================
-   Ronit
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(146, 113, 240, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid rgba(146, 113, 240, 0.8);
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: var(--gray-400));
+}
+
+.not-found-state {
+  display: none;
+  text-align: center;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+}
+.not-found-animation {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: radial-gradient(circle, rgba(146, 113, 240, 0.2) 0%, transparent 70%);
+  radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+================================ 
+
+ ===============================
+.word-content {
+  display: none;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  overflow: hiddxen;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.word-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+#word-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.phonetic {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+.play-button {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  background: linear-gradient(to right, var(--primary), #d946ef);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
 ================================ */
 
