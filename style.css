@@ -77,6 +77,19 @@
   color: var(--primary);
   font-size: 1.25rem;
 }
+.play-button {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  background: linear-gradient(to right, var(--primary), #d946ef);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 
 ================================ */
 
