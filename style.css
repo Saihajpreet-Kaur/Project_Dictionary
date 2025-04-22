@@ -58,6 +58,11 @@
   100% { transform: rotate(360deg); }
 }
 
+.loading-state p {
+  color: var(--gray-400));
+}
+
+
 
 
 ================================ 
