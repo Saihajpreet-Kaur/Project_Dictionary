@@ -91,7 +91,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
-  overflow: hiddxen;
+  overflow: hidden;
   animation: fadeIn 0.5s ease-out forwards;
 }
 @keyframes fadeIn {
