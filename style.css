@@ -43,6 +43,17 @@
   padding: 5rem 0;
 }
 
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(146, 113, 240, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid rgba(146, 113, 240, 0.8);
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+
 ================================ 
 
  ===============================
