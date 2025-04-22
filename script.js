@@ -20,6 +20,4 @@ const sourceUrl = document.getElementById('source-url');
 const sourceText = document.getElementById('source-text');
 // Global variables
 let currentAudio = null;
-// let searchHistory = (will update)
-
 let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
