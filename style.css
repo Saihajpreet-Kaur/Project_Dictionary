@@ -62,7 +62,10 @@
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(146, 113, 240, 0.5);
 }
-
+#mic-btn.listening {
+  color: var(--primary);
+  animation: pulse 2s infinite;
+}
   
 ================================ 
 
