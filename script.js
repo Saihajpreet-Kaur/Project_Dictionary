@@ -8,4 +8,10 @@ const historyList = document.getElementById('history-list');
 const emptyHistory = document.getElementById('empty-history');
 const clearHistoryBtn = document.getElementById('clear-history-btn');
 const loadingState = document.getElementById('loading');
+const notFoundState = document.getElementById('not-found');
+const notFoundWord = document.getElementById('not-found-word');
+const wordContent = document.getElementById('word-content');
+const wordTitle = document.getElementById('word-title');
+const wordPhonetic = document.getElementById('word-phonetic');
+const playAudioBtn = document.getElementById('play-audio');
 
