@@ -5,7 +5,7 @@
  ===============================
 
 .search-container {
-  posittion: relative;
+  position: relative;
   margin-bottom: 2rem;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.3);
