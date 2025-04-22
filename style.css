@@ -34,9 +34,16 @@
   
 ================================ 
 
-/* ===============================
-    Ranjot
-================================ */
+===============================
+.loading-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+================================ 
 
  ===============================
 .word-content {
