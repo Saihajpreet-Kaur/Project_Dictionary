@@ -67,5 +67,16 @@
 }
 
 
+#word-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.phonetic {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
 ================================ */
 
