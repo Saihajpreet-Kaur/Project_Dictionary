@@ -58,6 +58,10 @@
   background: linear-gradient(to right, var(--primary), #d946ef);
   color: white;
 }
+#search-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(146, 113, 240, 0.5);
+}
 
   
 ================================ 
