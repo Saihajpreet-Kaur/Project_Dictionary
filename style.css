@@ -30,13 +30,99 @@
   font-size: 1rem;
   outline: none;
 }
-
+#search-input::placeholder {
+  color: var(--gray-500);
+}
+.search-actions {
+  position: absolute;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
+.search-actions button {
+  background: transparent;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align : center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.search-actions button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#search-btn {
+  background: linear-gradient(to right, var(--primary), #d946ef);
+  color: white;
+}
+#search-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(146, 113, 240, 0.5);
+}
+#mic-btn.listening {
+  color: var(--primary);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
   
 ================================ 
 
-/* ===============================
-    Ranjot
-================================ */
+===============================
+.loading-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(146, 113, 240, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid rgba(146, 113, 240, 0.8);
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: var(--gray-400));
+}
+
+.not-found-state {
+  display: none;
+  text-align: center;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+}
+.not-found-animation {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: radial-gradient(circle, rgba(146, 113, 240, 0.2) 0%, transparent 70%);
+  radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+================================ 
 
  ===============================
 .word-content {
@@ -45,7 +131,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
-  overflow: hiddxen;
+  overflow: hidden;
   animation: fadeIn 0.5s ease-out forwards;
 }
 @keyframes fadeIn {
