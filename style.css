@@ -39,7 +39,17 @@
   display: flex;
   gap: 0.25rem;
 }
-
+.search-actions button {
+  background: transparent;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align : center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
   
 ================================ 
 
