@@ -33,6 +33,12 @@
 #search-input::placeholder {
   color: var(--gray-500);
 }
+.search-actions {
+  position: absolute;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
 
   
 ================================ 
