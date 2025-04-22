@@ -71,9 +71,15 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
 }
-
-
-
+.not-found-animation {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: radial-gradient(circle, rgba(146, 113, 240, 0.2) 0%, transparent 70%);
+  radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
 
 
 ================================ 
