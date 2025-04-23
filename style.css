@@ -80,7 +80,6 @@
   position: relative;
   animation: pulse 2s ease-in-out infinite;
 }
-
 .not-found-animation:before {
   content: '?';
   position: absolute;
@@ -91,22 +90,24 @@
   font-weight: bold;
   color: rgba(146, 113, 240, 0.8);
 }
-
 .not-found-state h2 {
   font-size: 1.5rem;
   color: white;
   margin-bottom: 0.5rem;
 }
-
 #not-found-word {
   color: var(--gray-400);
   margin-bottom: 1.5rem;
 }
-
 .not-found-tips {
   text-align: left;
   max-width: 300px;
   margin: 0 auto;
+}
+.not-found-tips p {
+  color: var(--gray-500);
+  font-size: 
+  margin-bottom: 0.5rem;
 }
 
 
