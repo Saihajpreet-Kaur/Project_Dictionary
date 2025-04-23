@@ -98,6 +98,11 @@
   margin-bottom: 0.5rem;
 }
 
+#not-found-word {
+  color: var(--gray-400);
+  margin-bottom: 1.5rem;
+}
+
 
 
 
