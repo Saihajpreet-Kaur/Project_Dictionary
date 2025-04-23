@@ -149,6 +149,11 @@
   font-size: 
   margin-bottom: 0.5rem;
 }
+.not-found-tips ul {
+  list-style-position: outside;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
 
 
 
