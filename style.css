@@ -92,6 +92,14 @@
   color: rgba(146, 113, 240, 0.8);
 }
 
+.not-found-state h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+
+
 
 
 ================================ 
