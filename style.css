@@ -121,6 +121,18 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
+.not-found-animation:before {
+  content: '?';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(146, 113, 240, 0.8);
+}
+
+
 
 ================================ 
 
