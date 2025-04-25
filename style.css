@@ -181,6 +181,14 @@
     transition: color 0.2s;
   }
   
+  #clear-history-btn:hover {
+    color: white;
+  }
+  
+  #history-list {
+    list-style: none;
+    padding: 0.25rem 0;
+  }
 ===============================
 .loading-state {
   display: none;
