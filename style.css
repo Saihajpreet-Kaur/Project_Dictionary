@@ -1,7 +1,7 @@
  ===============================
 :root {
   background: #1A1F2C;
-  --background-secondary: #121212;
+  background-secondary: #121212;
   --foreground: #ffffff;
   --primary: #9b87f5;
   --primary-light: rgba(155, 135, 245, 0.2);
