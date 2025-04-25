@@ -16,7 +16,7 @@
   radius: 1rem;
   
   primary-light: rgba(155, 135, 245, 0.2);
-  --primary-dark: #8B5CF6;
+  primary-dark: #8B5CF6;
   --gray-300: #D1D5DB;
   --gray-400: #9CA3AF;
   --gray-500: #6B7280;
