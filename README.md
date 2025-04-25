@@ -1,7 +1,9 @@
 
-# 📘 Dictionary App
+#  Dictionary App
 
-A simple, web-based dictionary built using HTML, CSS, and JavaScript. Users can search for any word to get its definition, pronunciation, synonyms, and antonyms.
+##📘 Overview
+WordWave is a modern Dictionary Web Application that allows users to look up word definitions, phonetics, synonyms, and usage examples in real-time. It utilizes the Free Dictionary API to deliver accurate and up-to-date word data. Built with HTML, CSS, and JavaScript, the application features voice search, search history, and responsive design for a smooth and interactive experience across devices.
+
 ## 🚀 Features
 
 - 🔍 **Search Functionality**: Users can search for any English word.
