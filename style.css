@@ -12,7 +12,7 @@
   gray-600: #4B5563;
   gray-700: #374151;
   gray-800: #1F2937;
-  --radius: 1rem;
+  radius: 1rem;
   --animation-duration: 0.3s;
 }
 ================================ 
