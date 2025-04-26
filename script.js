@@ -61,6 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
   updateHistoryDisplay();
 });
 
+searchBtn.addEventListener('click', handleSearch);
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    handleSearch();
+  }
+});
+
+micBtn.addEventListener('click', startListening);
+
+historyBtn.addEventListener('click', toggleHistoryDropdown);
+
+clearHistoryBtn.addEventListener('click', clearHistory);
+
 ---
 async function fetchWordData(word) {
   resetUI();
