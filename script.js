@@ -254,8 +254,26 @@ function toggleHistoryDropdown() {
   const isVisible = historyDropdown.style.display === 'block';
   historyDropdown.style.display = isVisible ? 'none' : 'block';
 }
-
-
+function addToHistory(word) {
+  // Remove the word if it's already in history
+  const index = searchHistory.findIndex(item => item.toLowerCase() === word.toLowerCase());
+  if (index !== -1) {
+    searchHistory.splice(index, 1);
+  }
+ // Add to the beginning
+  searchHistory.unshift(word);
+  
+  // Keep only 10 most recent
+  if (searchHistory.length > 10) {
+    searchHistory.pop();
+  }
+  
+  // Save to local storage
+  localStorage.setItem('wordwave_history', JSON.stringify(searchHistory));
+  
+  // Update display
+  updateHistoryDisplay();
+}
 
 
 
