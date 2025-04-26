@@ -140,6 +140,20 @@ function displayWordData(wordData){
     sourceSection.style.display = 'none';
   }
 }
+function playAudio(audioUrl) {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  
+  const audio = new Audio(audioUrl);
+  currentAudio = audio;
+  audio.play()
+    .catch(err => {
+      console.error('Error playing audio:', err);
+      alert("Could not play pronunciation audio.");
+    });
+}
 
 
 
