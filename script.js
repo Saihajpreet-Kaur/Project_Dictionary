@@ -50,7 +50,11 @@ async function fetchWordData(word) {
 }
 function displayWordData(wordData){
   wordContent.style.display = 'block';
+  wordTitle.textContent = wordData.word;
+  wordPhonetic.textContent = wordData.phonetic || '';
+
 }
+
 
 
 
