@@ -52,6 +52,15 @@ function displayWordData(wordData){
   wordContent.style.display = 'block';
   wordTitle.textContent = wordData.word;
   wordPhonetic.textContent = wordData.phonetic || '';
+  const audioUrl = wordData.phonetics?.find(p => p.audio)?.audio || '';
+  if (audioUrl) {
+    playAudioBtn.style.display = 'flex';
+    playAudioBtn.onclick = () => {
+      playAudio(audioUrl);
+    };
+  } else {
+    playAudioBtn.style.display = 'none';
+  }
 
 }
 
