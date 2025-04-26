@@ -52,7 +52,14 @@ if (SpeechRecognition) {
     micBtn.classList.remove('listening');
   };
 }
-
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  // Auto-focus the input on load
+  searchInput.focus();
+  
+  // Update history display
+  updateHistoryDisplay();
+});
 
 ---
 async function fetchWordData(word) {
