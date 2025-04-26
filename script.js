@@ -52,6 +52,8 @@ function displayWordData(wordData){
   wordContent.style.display = 'block';
   wordTitle.textContent = wordData.word;
   wordPhonetic.textContent = wordData.phonetic || '';
+
+  // Set up audio button
   const audioUrl = wordData.phonetics?.find(p => p.audio)?.audio || '';
   if (audioUrl) {
     playAudioBtn.style.display = 'flex';
@@ -61,6 +63,10 @@ function displayWordData(wordData){
   } else {
     playAudioBtn.style.display = 'none';
   }
+  // Render meanings
+  meaningsContainer.innerHTML = '';
+
+
 
 }
 
