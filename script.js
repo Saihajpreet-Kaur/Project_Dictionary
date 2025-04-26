@@ -74,6 +74,17 @@ historyBtn.addEventListener('click', toggleHistoryDropdown);
 
 clearHistoryBtn.addEventListener('click', clearHistory);
 
+// Click outside to close history dropdown
+document.addEventListener('click', (e) => {
+  if (!historyDropdown.contains(e.target) && 
+      e.target !== historyBtn && 
+      !historyBtn.contains(e.target) && 
+      historyDropdown.style.display === 'block') {
+    historyDropdown.style.display = 'none';
+  }
+});
+
+
 ---
 async function fetchWordData(word) {
   resetUI();
