@@ -37,6 +37,21 @@
   - A user-friendly *"Word not found"* message if the lookup fails
 
   ---
+  ### 📂 *Project Files*
+
+- *index.html*  
+  Contains the complete *HTML structure* of the application, including the header, search input, buttons, and result display layout.
+
+- *style.css*  
+  Provides the *styling* for the application, including layout, colors, animations, responsive design, and component appearance.
+
+- *script.js*  
+  Handles all the *functionality* of the app, such as:
+  - Fetching word data from the Dictionary API
+  - Managing voice search with Speech Recognition
+  - Updating the UI dynamically based on user interactions
+  - Managing search history and playback of word pronunciation
+    
 ## 🛠 Tech Stack
 
 - *HTML* – Structure of the app  
