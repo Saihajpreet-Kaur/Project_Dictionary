@@ -48,6 +48,9 @@ async function fetchWordData(word) {
     showLoading(true);
   }
 }
+function displayWordData(wordData){
+  wordContent.style.display = 'block';
+}
 
     
 
