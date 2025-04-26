@@ -41,5 +41,9 @@ async function fetchWordData(word) {
     const data = await response.json();
     displayWordData(data[0]);
     addToHistory(word);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    alert("Failed to fetch word data. Please try again.");
+
 
 
