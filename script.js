@@ -44,6 +44,12 @@ async function fetchWordData(word) {
   } catch (error) {
     console.error('Error fetching data:', error);
     alert("Failed to fetch word data. Please try again.");
+  } finally {
+    showLoading(true);
+  }
+}
+
+    
 
 
 
