@@ -52,6 +52,13 @@ function displayWordData(wordData){
   wordContent.style.display = 'block';
 }
 
+
+
+
+
+
+
+
     
 
 
