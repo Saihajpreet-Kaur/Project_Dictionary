@@ -83,6 +83,14 @@ document.addEventListener('click', (e) => {
     historyDropdown.style.display = 'none';
   }
 });
+// Functions
+function handleSearch() {
+  const word = searchInput.value.trim();
+  if (!word) return;
+  
+  fetchWordData(word);
+  historyDropdown.style.display = 'none';
+}
 
 
 ---
@@ -229,13 +237,73 @@ function resetUI() {
 }
 
 
+function startListening() {
+  if (recognition) {
+    try {
+      recognition.start();
+    } catch (error) {
+      // Handle the case when recognition is already started
+      console.error('Recognition error:', error);
+    }
+  } else {
+    alert("Speech recognition is not supported in your browser.");
+  }
+}
+
+function toggleHistoryDropdown() {
+  const isVisible = historyDropdown.style.display === 'block';
+  historyDropdown.style.display = isVisible ? 'none' : 'block';
+}
+function addToHistory(word) {
+  // Remove the word if it's already in history
+  const index = searchHistory.findIndex(item => item.toLowerCase() === word.toLowerCase());
+  if (index !== -1) {
+    searchHistory.splice(index, 1);
+  }
+ // Add to the beginning
+  searchHistory.unshift(word);
+  
+  // Keep only 10 most recent
+  if (searchHistory.length > 10) {
+    searchHistory.pop();
+  }
+  
+  // Save to local storage
+  localStorage.setItem('wordwave_history', JSON.stringify(searchHistory));
+  
+  // Update display
+  updateHistoryDisplay();
+}
+function updateHistoryDisplay() {
+  historyList.innerHTML = '';
+  
+  if (searchHistory.length > 0) {
+    emptyHistory.style.display = 'none';
+    
+    searchHistory.forEach((historyWord) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <button onclick="fetchWordData('${historyWord}')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+          ${historyWord}
+        </button>
+      `;
+      historyList.appendChild(li);
+    });
+  } else {
+    emptyHistory.style.display = 'block';
+  }
+}
+function clearHistory() {
+  searchHistory = [];
+  localStorage.removeItem('wordwave_history');
+  updateHistoryDisplay();
+  alert("Search history cleared");
+}
 
 
-
-
-
-
-
+// Make fetchWordData globally accessible for onclick handlers
+window.fetchWordData = fetchWordData;
 
 
 
