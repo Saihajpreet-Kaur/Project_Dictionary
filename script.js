@@ -294,6 +294,12 @@ function updateHistoryDisplay() {
     emptyHistory.style.display = 'block';
   }
 }
+function clearHistory() {
+  searchHistory = [];
+  localStorage.removeItem('wordwave_history');
+  updateHistoryDisplay();
+  alert("Search history cleared");
+}
 
 
 
