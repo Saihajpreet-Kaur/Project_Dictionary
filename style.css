@@ -289,7 +289,7 @@
 }
 .not-found-tips p {
   color: var(--gray-500);
-  font-size: 
+  font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
 .not-found-tips ul {
