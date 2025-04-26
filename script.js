@@ -162,6 +162,11 @@ function showNotFound(word) {
   notFoundState.style.display = 'block';
   notFoundWord.textContent = `We couldn't find any definitions for "${word}"`;
 }
+function resetUI() {
+  loadingState.style.display = 'none';
+  notFoundState.style.display = 'none';
+  wordContent.style.display = 'none';
+}
 
 
 
