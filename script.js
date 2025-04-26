@@ -104,9 +104,46 @@ function displayWordData(wordData){
     
     meaningSection.appendChild(definitionsDiv);
 
+    // synonyms
+    if (meaning.synonyms && meaning.synonyms.length > 0) {
+      const synonymsDiv = document.createElement('div');
+      synonymsDiv.className = 'synonyms';
+      
+      let synonymsHtml = `
+        <h4>Synonyms:</h4>
+        <div class="synonyms-list">
+      `;
+      
+      meaning.synonyms.forEach(synonym => {
+        synonymsHtml += `
+          <button 
+            class="synonym-tag" 
+            onclick="fetchWordData('${synonym}')"
+          >${synonym}</button>
+        `;
+      });
+      
+      synonymsHtml += </div>;
+      synonymsDiv.innerHTML = synonymsHtml;
+      meaningSection.appendChild(synonymsDiv);
+    }
+    meaningsContainer.appendChild(meaningSection);
+  })
 
-
+  //Source URL
+  if (wordData.sourceUrls && wordData.sourceUrls.length > 0) {
+    const url = wordData.sourceUrls[0];
+    sourceUrl.href = url;
+    sourceText.textContent = url.replace(/^https?:\/\//, '').split('/')[0];
+    sourceSection.style.display = 'block';
+  } else {
+    sourceSection.style.display = 'none';
+  }
 }
+
+
+
+
 
 
 
