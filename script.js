@@ -302,6 +302,8 @@ function clearHistory() {
 }
 
 
+// Make fetchWordData globally accessible for onclick handlers
+window.fetchWordData = fetchWordData;
 
 
 
