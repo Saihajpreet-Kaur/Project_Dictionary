@@ -69,6 +69,41 @@ function displayWordData(wordData){
     const meaningSection = document.createElement{'div'};
     meaningSection.className = 'meaning-section';
 
+    // part of speech header
+    const meaningHeader = document.createElement('div');
+    meaningHeader.className = 'meaning-header';
+    meaningHeader.innerHTML = `
+      <span class="part-of-speech">${meaning.partOfSpeech}</span>
+    `;
+    meaningSection.appendChild(meaningHeader);
+
+     // Definations
+     const definitionsDiv = document.createElement('div');
+     definitionsDiv.className = 'definitions';
+    
+    meaning.definitions.forEach((def, index) => {
+      const definition = document.createElement('div');
+      definition.className = 'definition';
+      
+      let definitionHtml = `
+        <p>
+          <span class="definition-number">${index + 1}.</span> 
+          ${def.definition}
+        </p>
+      `;
+      
+      if (def.example) {
+        definitionHtml += `
+          <p class="definition-example">"${def.example}"</p>
+        `;
+      }
+      
+      definition.innerHTML = definitionHtml;
+      definitionsDiv.appendChild(definition);
+    });
+    
+    meaningSection.appendChild(definitionsDiv);
+
 
 
 }
