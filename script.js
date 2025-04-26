@@ -140,6 +140,33 @@ function displayWordData(wordData){
     sourceSection.style.display = 'none';
   }
 }
+function playAudio(audioUrl) {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  
+  const audio = new Audio(audioUrl);
+  currentAudio = audio;
+  audio.play()
+    .catch(err => {
+      console.error('Error playing audio:', err);
+      alert("Could not play pronunciation audio.");
+    });
+}
+function showLoading(isLoading) {
+  loadingState.style.display = isLoading ? 'flex' : 'none';
+}
+
+function showNotFound(word) {
+  notFoundState.style.display = 'block';
+  notFoundWord.textContent = `We couldn't find any definitions for "${word}"`;
+}
+function resetUI() {
+  loadingState.style.display = 'none';
+  notFoundState.style.display = 'none';
+  wordContent.style.display = 'none';
+}
 
 
 
