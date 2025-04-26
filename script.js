@@ -237,6 +237,18 @@ function resetUI() {
 }
 
 
+function startListening() {
+  if (recognition) {
+    try {
+      recognition.start();
+    } catch (error) {
+      // Handle the case when recognition is already started
+      console.error('Recognition error:', error);
+    }
+  } else {
+    alert("Speech recognition is not supported in your browser.");
+  }
+}
 
 
 
