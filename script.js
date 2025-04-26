@@ -83,6 +83,14 @@ document.addEventListener('click', (e) => {
     historyDropdown.style.display = 'none';
   }
 });
+// Functions
+function handleSearch() {
+  const word = searchInput.value.trim();
+  if (!word) return;
+  
+  fetchWordData(word);
+  historyDropdown.style.display = 'none';
+}
 
 
 ---
