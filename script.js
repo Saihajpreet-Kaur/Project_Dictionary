@@ -250,7 +250,10 @@ function startListening() {
   }
 }
 
-
+function toggleHistoryDropdown() {
+  const isVisible = historyDropdown.style.display === 'block';
+  historyDropdown.style.display = isVisible ? 'none' : 'block';
+}
 
 
 
