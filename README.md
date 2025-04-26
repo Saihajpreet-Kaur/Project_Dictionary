@@ -14,6 +14,29 @@
 - **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
 - **Error Handling:** Displays a friendly message when the searched word is not found.
 ---
+
+### 🎨 *User Interface*
+
+- *Header:*  
+  Displays the application title *"WordWave"* along with a short tagline "Explore words with style and sound" to introduce the purpose of the app.
+
+- *Search Box:*  
+  A prominently centered input field where users can *type a word* they want to look up.
+
+- *Search Actions:*  
+  - 🔍 *Search Button* to fetch word details  
+  - 🎤 *Microphone Button* to perform *voice-based search*  
+  - 🔁 *History Button* to access recently searched words
+
+- *Result Area:*  
+  Initially hidden, this section becomes visible after a word is searched. It displays:
+  - The *word title*
+  - *Phonetic transcription*
+  - *Audio button* to hear pronunciation
+  - *Definitions, **examples, and **synonyms*
+  - A user-friendly *"Word not found"* message if the lookup fails
+
+  ---
 ## 🛠 Tech Stack
 
 - *HTML* – Structure of the app  

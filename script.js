@@ -21,3 +21,139 @@ const sourceText = document.getElementById('source-text');
 // Global variables
 let currentAudio = null;
 let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
+
+
+
+
+---
+async function fetchWordData(word) {
+  resetUI();
+  showLoading(true);
+
+  try {
+    const response = await fetch(https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()});
+
+    if (!response.ok) {
+      showNotFound(word);
+      return;
+    }
+
+    const data = await response.json();
+    displayWordData(data[0]);
+    addToHistory(word);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    alert("Failed to fetch word data. Please try again.");
+  } finally {
+    showLoading(true);
+  }
+}
+function displayWordData(wordData){
+  wordContent.style.display = 'block';
+  wordTitle.textContent = wordData.word;
+  wordPhonetic.textContent = wordData.phonetic || '';
+
+  // Set up audio button
+  const audioUrl = wordData.phonetics?.find(p => p.audio)?.audio || '';
+  if (audioUrl) {
+    playAudioBtn.style.display = 'flex';
+    playAudioBtn.onclick = () => {
+      playAudio(audioUrl);
+    };
+  } else {
+    playAudioBtn.style.display = 'none';
+  }
+  // Render meanings
+  meaningsContainer.innerHTML = '';
+  wordData.meanings.forEach((meaning) => {
+    const meaningSection = document.createElement{'div'};
+    meaningSection.className = 'meaning-section';
+
+    // part of speech header
+    const meaningHeader = document.createElement('div');
+    meaningHeader.className = 'meaning-header';
+    meaningHeader.innerHTML = `
+      <span class="part-of-speech">${meaning.partOfSpeech}</span>
+    `;
+    meaningSection.appendChild(meaningHeader);
+
+     // Definations
+     const definitionsDiv = document.createElement('div');
+     definitionsDiv.className = 'definitions';
+    
+    meaning.definitions.forEach((def, index) => {
+      const definition = document.createElement('div');
+      definition.className = 'definition';
+      
+      let definitionHtml = `
+        <p>
+          <span class="definition-number">${index + 1}.</span> 
+          ${def.definition}
+        </p>
+      `;
+      
+      if (def.example) {
+        definitionHtml += `
+          <p class="definition-example">"${def.example}"</p>
+        `;
+      }
+      
+      definition.innerHTML = definitionHtml;
+      definitionsDiv.appendChild(definition);
+    });
+    
+    meaningSection.appendChild(definitionsDiv);
+
+    // synonyms
+    if (meaning.synonyms && meaning.synonyms.length > 0) {
+      const synonymsDiv = document.createElement('div');
+      synonymsDiv.className = 'synonyms';
+      
+      let synonymsHtml = `
+        <h4>Synonyms:</h4>
+        <div class="synonyms-list">
+      `;
+      
+      meaning.synonyms.forEach(synonym => {
+        synonymsHtml += `
+          <button 
+            class="synonym-tag" 
+            onclick="fetchWordData('${synonym}')"
+          >${synonym}</button>
+        `;
+      });
+      
+      synonymsHtml += </div>;
+      synonymsDiv.innerHTML = synonymsHtml;
+      meaningSection.appendChild(synonymsDiv);
+    }
+    meaningsContainer.appendChild(meaningSection);
+  })
+
+  //Source URL
+  if (wordData.sourceUrls && wordData.sourceUrls.length > 0) {
+    const url = wordData.sourceUrls[0];
+    sourceUrl.href = url;
+    sourceText.textContent = url.replace(/^https?:\/\//, '').split('/')[0];
+    sourceSection.style.display = 'block';
+  } else {
+    sourceSection.style.display = 'none';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+

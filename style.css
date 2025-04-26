@@ -15,14 +15,14 @@
   gray-800: #1F2937;
   radius: 1rem;
   
-  --primary-light: rgba(155, 135, 245, 0.2);
-  --primary-dark: #8B5CF6;
-  --gray-300: #D1D5DB;
-  --gray-400: #9CA3AF;
-  --gray-500: #6B7280;
-  --gray-600: #4B5563;
-  --gray-700: #374151;
-  --gray-800: #1F2937;
+  primary-light: rgba(155, 135, 245, 0.2);
+  primary-dark: #8B5CF6;
+  gray-300: #D1D5DB;
+  gray-400: #9CA3AF;
+  gray-500: #6B7280;
+  gray-600: #4B5563;
+  gray-700: #374151;
+  gray-800: #1F2937;
   --radius: 1rem;
   
   --animation-duration: 0.3s;
@@ -289,11 +289,11 @@
 }
 .not-found-tips p {
   color: var(--gray-500);
-  font-size: 
+  font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
 .not-found-tips ul {
-  list-style-position: outside;
+  list-style-position: inside;
   color: var(--gray-500);
   font-size: 0.875rem;
 }
