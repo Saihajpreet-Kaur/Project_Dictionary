@@ -21,3 +21,25 @@ const sourceText = document.getElementById('source-text');
 // Global variables
 let currentAudio = null;
 let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
+
+
+
+
+---
+async function fetchWordData(word) {
+  resetUI();
+  showLoading(true);
+
+  try {
+    const response = await fetch(https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()});
+
+    if (!response.ok) {
+      showNotFound(word);
+      return;
+    }
+
+    const data = await response.json();
+    displayWordData(data[0]);
+    addToHistory(word);
+
+
