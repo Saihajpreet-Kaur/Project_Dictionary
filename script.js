@@ -154,6 +154,14 @@ function playAudio(audioUrl) {
       alert("Could not play pronunciation audio.");
     });
 }
+function showLoading(isLoading) {
+  loadingState.style.display = isLoading ? 'flex' : 'none';
+}
+
+function showNotFound(word) {
+  notFoundState.style.display = 'block';
+  notFoundWord.textContent = `We couldn't find any definitions for "${word}"`;
+}
 
 
 
