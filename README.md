@@ -43,7 +43,28 @@
 - *CSS* – Styling and layout  
 - *JavaScript* – Logic and interactivity  
 - *[Free Dictionary API]* – For fetching word data
+### 📦 **Dependencies**
 
+- **HTML**  
+  Structure of the WordWave application, organizing the header, search section, and result display areas.
+
+- **CSS**  
+  Styling for layout, colors, animations, responsiveness, and overall visual polish.
+
+- **JavaScript**  
+  Handles the search functionality, API integration, audio playback, voice input, and dynamic DOM updates.
+
+- **Dictionary API**  
+  [DictionaryAPI.dev](https://dictionaryapi.dev/)  
+  - Used to fetch word definitions, phonetics, examples, and synonyms.
+
+- **Font Awesome**  
+  [CDN Link](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css)  
+  - Provides the icons like the **volume (audio)** icon for pronunciation.
+
+- **Google Fonts - Poppins**  
+  [CDN Link](https://fonts.googleapis.com/css2?family=Poppins&display=swap)  
+  - Used for clean and modern typography throughout the app.
 ---
 ## 📦 How to Run the Project
 
