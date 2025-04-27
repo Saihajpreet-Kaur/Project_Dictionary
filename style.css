@@ -116,7 +116,7 @@
   padding: 0.5rem;
   border-radius: 9999px;
   display: flex;
-  align : center;
+  align-items : center;
   justify-content: center;
   transition: all 0.2s ease;
 }
