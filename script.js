@@ -99,7 +99,7 @@ async function fetchWordData(word) {
   showLoading(true);
 
   try {
-    const response = await fetch(https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()});
+    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}`);
 
     if (!response.ok) {
       showNotFound(word);
@@ -134,7 +134,7 @@ function displayWordData(wordData){
   // Render meanings
   meaningsContainer.innerHTML = '';
   wordData.meanings.forEach((meaning) => {
-    const meaningSection = document.createElement{'div'};
+    const meaningSection = document.createElement('div');
     meaningSection.className = 'meaning-section';
 
     // part of speech header
@@ -191,7 +191,7 @@ function displayWordData(wordData){
         `;
       });
       
-      synonymsHtml += </div>;
+      synonymsHtml += "</div>";
       synonymsDiv.innerHTML = synonymsHtml;
       meaningSection.appendChild(synonymsDiv);
     }
