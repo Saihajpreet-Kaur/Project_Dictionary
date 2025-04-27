@@ -4,17 +4,6 @@
   --background-secondary: #121212;
   --foreground: #ffffff;
   --primary: #9b87f5;
-
-  --primary-light: rgba(155, 135, 245, 0.3);
-  --primary-dark: #8B5CF6;
-  --gray-300: #D1D5DB;
-  --gray-400: #9CA3AF;
-  --gray-500: #6B7280;
-  --gray-600: #4B5563;
-  --gray-700: #374151;
-  --gray-800: #1F2937;
-  --radius: 1rem;
-  
   --primary-light: rgba(155, 135, 245, 0.2);
   --primary-dark: #8B5CF6;
   --gray-300: #D1D5DB;
@@ -474,4 +463,7 @@
   .source-section svg {
     margin-left: 0.25rem;
   }
-
+/* Animation Class */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
