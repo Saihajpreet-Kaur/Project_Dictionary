@@ -100,8 +100,8 @@
 - If the API cannot find a word, a *"Word Not Found"* message is shown.
 - If there’s a network issue, an alert informs the user.
 - If speech recognition fails, an error alert is displayed.
-
-The app ensures that users are always notified clearly in case of any issue.
+  The app ensures that users are always notified clearly in case of any issue.
+  
 ---
 ### 🔊 *Audio Pronunciation*
 
