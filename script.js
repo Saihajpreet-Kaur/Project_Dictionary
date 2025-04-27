@@ -99,7 +99,7 @@ async function fetchWordData(word) {
   showLoading(true);
 
   try {
-    const response = await fetch(https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()});
+    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}`);
 
     if (!response.ok) {
       showNotFound(word);
