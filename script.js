@@ -134,7 +134,7 @@ function displayWordData(wordData){
   // Render meanings
   meaningsContainer.innerHTML = '';
   wordData.meanings.forEach((meaning) => {
-    const meaningSection = document.createElement{'div'};
+    const meaningSection = document.createElement('div');
     meaningSection.className = 'meaning-section';
 
     // part of speech header
