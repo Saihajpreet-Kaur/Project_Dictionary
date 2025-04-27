@@ -196,7 +196,7 @@ function displayWordData(wordData){
       meaningSection.appendChild(synonymsDiv);
     }
     meaningsContainer.appendChild(meaningSection);
-  })
+  });
 
   //Source URL
   if (wordData.sourceUrls && wordData.sourceUrls.length > 0) {
