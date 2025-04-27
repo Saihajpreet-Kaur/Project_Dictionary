@@ -1,5 +1,4 @@
-
-#  Dictionary App
+# 🌟 WordWave – Modern Dictionary Application
 
 ## **📘 Overview**
 
@@ -57,7 +56,8 @@
 - *HTML* – Structure of the app  
 - *CSS* – Styling and layout  
 - *JavaScript* – Logic and interactivity  
-- *[Free Dictionary API]* – For fetching word data
+- - *Free Dictionary API* – For fetching word data
+
 ### 📦 **Dependencies**
 
 - **HTML**  
@@ -95,6 +95,17 @@
   - Style the layout, create a clean dark theme, and add visual effects.
   - Ensure the app is **responsive** and **user-friendly** across desktop and mobile devices.
 ---
+### 🔄 **API Integration Workflow**
+
+```mermaid
+flowchart TD
+    A[User inputs or speaks a word] --> B[JavaScript captures the word]
+    B --> C[Fetch request sent to Dictionary API]
+    C --> D{API Response}
+    D -- Word Found --> E[Display Word, Phonetics, Meanings, Synonyms, Audio]
+    D -- Word Not Found --> F[Show "Word Not Found" Message]
+```
+---
 ### ⚠️ *Error Handling*
 
 - If the API cannot find a word, a *"Word Not Found"* message is shown.
@@ -108,26 +119,25 @@
 - Plays the correct pronunciation of the searched word using the phonetic audio provided by the API.
 - The audio button appears only if a pronunciation is available.
 ---
-## 📦 How to Run the Project
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/dictionary-app.git
    
-👥 Team Members
+###👥 *Team Members*
 1.Saihajpreet Kaur
 2.Ranjot Kaur
 3.Ronit Khanna
 4.Om Aggarwal
 
 
-💡 Future Improvements
-📚 Show example usage of the word in a sentence
+###💡 *Future Improvements*
 
-⭐ Allow saving favorite words (localStorage)
+- Add Dark Mode and Light Mode toggle
+- Add auto-suggestions while typing words
+- Add bookmarking feature to save favorite words
+- Include offline word lookup support
 
-🕓 Add search history for quick access
+## 🚀 How to Run
 
-🌙 Dark mode toggle
+```bash
+# Clone the repository
+git clone https://github.com/Saihajpreet-Kaur/Project_Dictionary.git
 
-📱 Improve responsive design for mobile devices
+# Open the folder and open the index.html file in any web browser
