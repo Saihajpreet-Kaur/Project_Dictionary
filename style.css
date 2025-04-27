@@ -443,4 +443,34 @@
 
 
 ================================ */
-
+  .source-section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .source-section p {
+    color: var(--gray-500);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .source-section a {
+    color: var(--gray-400);
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .source-section a:hover {
+    color: var(--primary);
+  }
+  
+  .source-section svg {
+    margin-left: 0.25rem;
+  }
+===========
