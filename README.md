@@ -37,13 +37,63 @@
   - A user-friendly *"Word not found"* message if the lookup fails
 
   ---
+  ### 📂 *Project Files*
+
+- *index.html*  
+  Contains the complete *HTML structure* of the application, including the header, search input, buttons, and result display layout.
+
+- *style.css*  
+  Provides the *styling* for the application, including layout, colors, animations, responsive design, and component appearance.
+
+- *script.js*  
+  Handles all the *functionality* of the app, such as:
+  - Fetching word data from the Dictionary API
+  - Managing voice search with Speech Recognition
+  - Updating the UI dynamically based on user interactions
+  - Managing search history and playback of word pronunciation
+    
 ## 🛠 Tech Stack
 
 - *HTML* – Structure of the app  
 - *CSS* – Styling and layout  
 - *JavaScript* – Logic and interactivity  
 - *[Free Dictionary API]* – For fetching word data
+### 📦 **Dependencies**
 
+- **HTML**  
+  Structure of the WordWave application, organizing the header, search section, and result display areas.
+
+- **CSS**  
+  Styling for layout, colors, animations, responsiveness, and overall visual polish.
+
+- **JavaScript**  
+  Handles the search functionality, API integration, audio playback, voice input, and dynamic DOM updates.
+
+- **Dictionary API**  
+  [DictionaryAPI.dev](https://dictionaryapi.dev/)  
+  - Used to fetch word definitions, phonetics, examples, and synonyms.
+
+- **Font Awesome**  
+  [CDN Link](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css)  
+  - Provides the icons like the **volume (audio)** icon for pronunciation.
+
+- **Google Fonts - Poppins**  
+  [CDN Link](https://fonts.googleapis.com/css2?family=Poppins&display=swap)  
+  - Used for clean and modern typography throughout the app.
+ 
+    
+  ### 🛠️ **Technical Implementation**
+
+- The application uses the **[Dictionary API](https://dictionaryapi.dev/)** to **fetch word data** such as meanings, phonetic transcriptions, examples, and synonyms.
+
+- **JavaScript** is used to:
+  - Make API requests and handle asynchronous data fetching.
+  - Dynamically update the HTML elements based on the search results.
+  - Manage additional functionalities like voice input (Speech Recognition) and search history.
+
+- **CSS** is applied to:
+  - Style the layout, create a clean dark theme, and add visual effects.
+  - Ensure the app is **responsive** and **user-friendly** across desktop and mobile devices.
 ---
 ## 📦 How to Run the Project
 

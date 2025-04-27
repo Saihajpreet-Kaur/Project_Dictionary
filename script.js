@@ -22,7 +22,75 @@ const sourceText = document.getElementById('source-text');
 let currentAudio = null;
 let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
 
+// Initialize speech recognition
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = null;
 
+if (SpeechRecognition) {
+  recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.lang = 'en-US';
+  
+  recognition.onstart = () => {
+    micBtn.classList.add('listening');
+  };
+  
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    searchInput.value = transcript;
+    handleSearch();
+    micBtn.classList.remove('listening');
+  };
+  
+  recognition.onerror = (event) => {
+    console.error('Speech recognition error', event);
+    micBtn.classList.remove('listening');
+    alert("Speech recognition failed. Please try again or type your query.");
+  };
+  
+  recognition.onend = () => {
+    micBtn.classList.remove('listening');
+  };
+}
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  // Auto-focus the input on load
+  searchInput.focus();
+  
+  // Update history display
+  updateHistoryDisplay();
+});
+
+searchBtn.addEventListener('click', handleSearch);
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    handleSearch();
+  }
+});
+
+micBtn.addEventListener('click', startListening);
+
+historyBtn.addEventListener('click', toggleHistoryDropdown);
+
+clearHistoryBtn.addEventListener('click', clearHistory);
+
+// Click outside to close history dropdown
+document.addEventListener('click', (e) => {
+  if (!historyDropdown.contains(e.target) && 
+      e.target !== historyBtn && 
+      !historyBtn.contains(e.target) && 
+      historyDropdown.style.display === 'block') {
+    historyDropdown.style.display = 'none';
+  }
+});
+// Functions
+function handleSearch() {
+  const word = searchInput.value.trim();
+  if (!word) return;
+  
+  fetchWordData(word);
+  historyDropdown.style.display = 'none';
+}
 
 
 ---
@@ -140,15 +208,102 @@ function displayWordData(wordData){
     sourceSection.style.display = 'none';
   }
 }
+function playAudio(audioUrl) {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  
+  const audio = new Audio(audioUrl);
+  currentAudio = audio;
+  audio.play()
+    .catch(err => {
+      console.error('Error playing audio:', err);
+      alert("Could not play pronunciation audio.");
+    });
+}
+function showLoading(isLoading) {
+  loadingState.style.display = isLoading ? 'flex' : 'none';
+}
+
+function showNotFound(word) {
+  notFoundState.style.display = 'block';
+  notFoundWord.textContent = `We couldn't find any definitions for "${word}"`;
+}
+function resetUI() {
+  loadingState.style.display = 'none';
+  notFoundState.style.display = 'none';
+  wordContent.style.display = 'none';
+}
 
 
+function startListening() {
+  if (recognition) {
+    try {
+      recognition.start();
+    } catch (error) {
+      // Handle the case when recognition is already started
+      console.error('Recognition error:', error);
+    }
+  } else {
+    alert("Speech recognition is not supported in your browser.");
+  }
+}
+
+function toggleHistoryDropdown() {
+  const isVisible = historyDropdown.style.display === 'block';
+  historyDropdown.style.display = isVisible ? 'none' : 'block';
+}
+function addToHistory(word) {
+  // Remove the word if it's already in history
+  const index = searchHistory.findIndex(item => item.toLowerCase() === word.toLowerCase());
+  if (index !== -1) {
+    searchHistory.splice(index, 1);
+  }
+ // Add to the beginning
+  searchHistory.unshift(word);
+  
+  // Keep only 10 most recent
+  if (searchHistory.length > 10) {
+    searchHistory.pop();
+  }
+  
+  // Save to local storage
+  localStorage.setItem('wordwave_history', JSON.stringify(searchHistory));
+  
+  // Update display
+  updateHistoryDisplay();
+}
+function updateHistoryDisplay() {
+  historyList.innerHTML = '';
+  
+  if (searchHistory.length > 0) {
+    emptyHistory.style.display = 'none';
+    
+    searchHistory.forEach((historyWord) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <button onclick="fetchWordData('${historyWord}')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+          ${historyWord}
+        </button>
+      `;
+      historyList.appendChild(li);
+    });
+  } else {
+    emptyHistory.style.display = 'block';
+  }
+}
+function clearHistory() {
+  searchHistory = [];
+  localStorage.removeItem('wordwave_history');
+  updateHistoryDisplay();
+  alert("Search history cleared");
+}
 
 
-
-
-
-
-
+// Make fetchWordData globally accessible for onclick handlers
+window.fetchWordData = fetchWordData;
 
 
 
