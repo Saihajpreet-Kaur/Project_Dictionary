@@ -259,7 +259,7 @@
     height: 80px;
     margin: 0 auto 1.5rem;
     background: radial-gradient(circle, rgba(146, 113, 240, 0.2) 0%, transparent 70%);
-    radius: 50%;
+    border-radius: 50%;
     position: relative;
     animation: pulse 2s ease-in-out infinite;
   }
