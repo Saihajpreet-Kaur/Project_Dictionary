@@ -102,6 +102,12 @@
 - If speech recognition fails, an error alert is displayed.
 
 The app ensures that users are always notified clearly in case of any issue.
+---
+### 🔊 *Audio Pronunciation*
+
+- Plays the correct pronunciation of the searched word using the phonetic audio provided by the API.
+- The audio button appears only if a pronunciation is available.
+---
 ## 📦 How to Run the Project
 
 1. Clone the repository:
