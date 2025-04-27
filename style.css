@@ -467,3 +467,47 @@
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
   }
+ /* Media Queries */
+  @media (max-width: 640px) {
+    body {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .search-container {
+      margin-bottom: 1.5rem;
+    }
+  
+    #search-input {
+      padding: 0.75rem 1rem;
+      padding-right: 7rem;
+    }
+  
+    .word-header {
+      padding: 1rem;
+    }
+  
+    #word-title {
+      font-size: 1.5rem;
+    }
+  
+    .phonetic {
+      font-size: 1rem;
+    }
+  
+    .play-button {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .meanings-container {
+      padding: 1rem;
+    }
+  
+    .source-section {
+      padding: 0 1rem 1rem;
+    }
+  }
