@@ -244,7 +244,7 @@
 .loading-state p {
   color: var(--gray-400);
 }
-
+/*Not Found State */
 .not-found-state {
   display: none;
   text-align: center;
@@ -302,13 +302,7 @@
   margin: 0.25rem 0;
 }
 
-
-
-
-
-================================ 
-
- ===============================
+/*Word Content */
 .word-content {
   display: none;
   backdrop-filter: blur(10px);
@@ -360,6 +354,14 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.play-button:hover {
+    box-shadow: 0 0 15px rgba(146, 113, 240, 0.5);
+}
+  
+.play-button:active {
+    transform: scale(0.95);
+}
+  
 
 
 ================================ */
