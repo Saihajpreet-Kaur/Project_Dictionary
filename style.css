@@ -44,7 +44,7 @@
     padding: 2rem 1rem;
   }
   
-  container {
+  .container {
     max-width: 768px;
     margin: 0 auto;
     padding: 1rem 0;
