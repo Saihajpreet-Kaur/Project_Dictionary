@@ -511,3 +511,21 @@
       padding: 0 1rem 1rem;
     }
   }
+ /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(146, 113, 240, 0.4);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(146, 113, 240, 0.6);
+  }
+  
