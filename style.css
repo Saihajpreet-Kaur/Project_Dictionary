@@ -463,4 +463,7 @@
   .source-section svg {
     margin-left: 0.25rem;
   }
-
+/* Animation Class */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
