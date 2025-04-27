@@ -190,9 +190,21 @@
     list-style: none;
     padding: 0.25rem 0;
   }
+
   #history-list li button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
+  }
+  #history-list li button {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--gray-300);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
   }
   
   #history-list li svg {
