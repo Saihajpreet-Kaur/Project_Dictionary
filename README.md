@@ -95,6 +95,13 @@
   - Style the layout, create a clean dark theme, and add visual effects.
   - Ensure the app is **responsive** and **user-friendly** across desktop and mobile devices.
 ---
+### ⚠️ *Error Handling*
+
+- If the API cannot find a word, a *"Word Not Found"* message is shown.
+- If there’s a network issue, an alert informs the user.
+- If speech recognition fails, an error alert is displayed.
+
+The app ensures that users are always notified clearly in case of any issue.
 ## 📦 How to Run the Project
 
 1. Clone the repository:
