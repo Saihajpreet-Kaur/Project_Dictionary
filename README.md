@@ -101,9 +101,9 @@
 flowchart TD
     A[User inputs or speaks a word] --> B[JavaScript captures the word]
     B --> C[Fetch request sent to Dictionary API]
-    C --> D{API Response}
+    C --> D[API Response]
     D -- Word Found --> E[Display Word, Phonetics, Meanings, Synonyms, Audio]
-    D -- Word Not Found --> F[Show "Word Not Found" Message]
+    D -- Word Not Found --> F[Display Word Not Found Message]
 ```
 ---
 ### ⚠️ *Error Handling*
