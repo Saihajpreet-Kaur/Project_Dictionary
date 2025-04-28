@@ -4,7 +4,12 @@
 
 **WordWave** is a modern Dictionary Web Application that allows users to look up word definitions, phonetics, synonyms, and usage examples in real-time. It utilizes the Free Dictionary API to deliver accurate and up-to-date word data. Built with HTML, CSS, and JavaScript, the application features voice search, search history, and responsive design for a smooth and interactive experience across devices.
 
-## **✨ Key Features**
+### 🏠 Homepage
+![Homepage](images/Image1.png)
+
+### 🔎 📋 Word Result Display
+
+![Search Feature](images/Image2.png)
 
 - **Word Search:** Instantly search for word meanings, phonetic transcription, and usage examples.
 - **Voice Search:** Use your microphone to speak and search for words hands-free.
@@ -112,10 +117,9 @@ flowchart TD
 - If there’s a network issue, an alert informs the user.
 - If speech recognition fails, an error alert is displayed.
   The app ensures that users are always notified clearly in case of any issue.
-  
----
+![Result](images/Image3.png)
 ### 🔊 *Audio Pronunciation*
-
+----
 - Plays the correct pronunciation of the searched word using the phonetic audio provided by the API.
 - The audio button appears only if a pronunciation is available.
 ---
@@ -132,7 +136,7 @@ flowchart TD
 ##👥 *Team Collaboration Summary* - 
 All team members actively contributed across UI design, functionality development, and issue resolution, ensuring a smooth and collaborative project execution.
 
-#💡 *Future Improvements*
+##💡 *Future Improvements*
 
 - Add Dark Mode and Light Mode toggle
 - Add auto-suggestions while typing words
