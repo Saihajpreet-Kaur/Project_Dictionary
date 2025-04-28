@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +8,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Main Wrapper -->
   <div class="container">
-
-    
     <!-- Header -->
     <header>
       <h1>WordWave</h1>
       <p class="subtitle">Explore words with style and sound</p>
     </header>
 
-
-       <!-- Search Bar -->
+    <!-- Search Bar -->
     <div class="search-container">
       <input type="text" id="search-input" placeholder="Search for a word...">
       <div class="search-actions">
@@ -35,44 +31,44 @@
       </div>
     </div>
 
+    <!-- History Dropdown -->
+    <div id="history-dropdown" class="history-dropdown">
+      <div class="history-header">
+        <h3>Recent Searches</h3>
+        <button id="clear-history-btn">Clear All</button>
+      </div>
+      <ul id="history-list">
+        <!-- History items will be added here dynamically -->
+      </ul>
+      <div id="empty-history" class="empty-history">
+        <p>No search history yet</p>
+      </div>
+    </div>
 
-<div id="history-dropdown" class="history-dropdown">
-  <div class="history-header">
-    <h3>Recent Searches</h3>
-    <button id="clear-history-btn">Clear All</button>
-  </div>
-  <ul id="history-list">
-    <!-- History items will be added here dynamically -->
-  </ul>
-  <div id="empty-history" class="empty-history">
-    <p>No search history yet</p>
-  </div>
-</div>
+    <!-- Word Content -->
+    <div class="content-container">
+      <!-- Loading State -->
+      <div id="loading" class="loading-state">
+        <div class="loading-spinner"></div>
+        <p>Looking up...</p>
+      </div>
 
+      <!-- Not Found State -->
+      <div id="not-found" class="not-found-state">
+        <div class="not-found-animation"></div>
+        <h2>Word Not Found</h2>
+        <p id="not-found-word"></p>
+        <div class="not-found-tips">
+          <p>Try:</p>
+          <ul>
+            <li>Checking your spelling</li>
+            <li>Looking for a more common word</li>
+            <li>Searching for a related term</li>
+          </ul>
+        </div>
+      </div>
 
-
-<div class ="content-container">   
-<div class="loading-state" id="loading">
-  <div class="loading-spinner"></div>
-  <p>Looking up...</p>
-</div>
-
-<div class="not-found-state" id="not-found">
-  <div class="not-found-animation"></div>
-  <h2>Word Not Found</h2>
-  <p id="not-found-word"></p>
-  <div class="not-found-tips">
-    <p>Try:</p>
-    <ul>
-      <li>Checking your spelling</li>
-      <li>Looking for a more common word</li>
-      <li>Searching for a related term</li>
-    </ul>
-  </div>
-</div>
-
-
- <!-- Word Content -->
+      <!-- Word Content -->
       <div id="word-content" class="word-content">
         <div class="word-header">
           <div>
@@ -84,7 +80,6 @@
           </button>
         </div>
 
-
         <div id="meanings-container" class="meanings-container">
           <!-- Meanings will be added here dynamically -->
         </div>
@@ -95,10 +90,11 @@
             Source:
             <a id="source-url" href="#" target="_blank" rel="noopener noreferrer">
               <span id="source-text"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
               <footer>
-                <p>Credits: Dictionary App Project</p>
+                <p>Credits: <a  target="_blank">Ronit Khanna</a> | Dictionary App Project</p>
+                <p><a Saihajpreet Kaur,Ranjot Kaur,Om aggarwal</p>
             </footer>
+              
             </a>
           </p>
         </div>
@@ -108,4 +104,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
