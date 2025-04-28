@@ -119,7 +119,7 @@
 }
 #search-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(146, 113, 240, 0.5);
+  box-shadow: 0 0 15px rgba(146, 113, 240, 1);
 }
 #mic-btn.listening {
   color: var(--primary);
