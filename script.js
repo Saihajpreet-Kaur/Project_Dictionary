@@ -37,7 +37,7 @@ if (SpeechRecognition) {
   
   recognition.onresult = (event) => {
     const transcript = event.results[0][0].transcript;
-    searchInput.value = transcript;
+    searchInput.value = transcript.trim();
     handleSearch();
     micBtn.classList.remove('listening');
   };
