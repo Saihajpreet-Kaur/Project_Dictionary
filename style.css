@@ -179,7 +179,7 @@
     color: var(--gray-400);
     font-size: 0.75rem;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: color 0.3s;
   }
   
   #clear-history-btn:hover {
