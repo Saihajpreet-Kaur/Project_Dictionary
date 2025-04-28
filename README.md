@@ -129,10 +129,10 @@ flowchart TD
 | *Ronit Khanna*       | Worked on implementing search functionality and integrated parts of the Dictionary API responses in JavaScript, and participated in solving code-related issues. |
 | *Om Aggarwal*        | Helped in creating dynamic HTML sections, worked on CSS improvements, contributed to JavaScript code for interactivity, and supported in identifying and fixing technical bugs. |
 
-##👥 *Team Collaboration Summary*
+##👥 *Team Collaboration Summary* - 
 All team members actively contributed across UI design, functionality development, and issue resolution, ensuring a smooth and collaborative project execution.
 
-##💡 *Future Improvements*
+#💡 *Future Improvements*
 
 - Add Dark Mode and Light Mode toggle
 - Add auto-suggestions while typing words
