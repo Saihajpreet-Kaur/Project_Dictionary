@@ -1,4 +1,3 @@
-
 // DOM Elements
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
@@ -25,10 +24,6 @@ let currentAudio = null;
 let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
 
 // Initialize speech recognition
-if (!('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
-  alert('Speech Recognition is not supported by this browser.');
-  return;
-}
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 let recognition = null;
 
@@ -43,7 +38,7 @@ if (SpeechRecognition) {
   
   recognition.onresult = (event) => {
     const transcript = event.results[0][0].transcript;
-    searchInput.value = transcript.trim();
+    searchInput.value = transcript;
     handleSearch();
     micBtn.classList.remove('listening');
   };
@@ -106,7 +101,7 @@ async function fetchWordData(word) {
   showLoading(true);
   
   try {
-    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}`);
+    const response = await fetch(https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()});
     
     if (!response.ok) {
       showNotFound(word);
@@ -206,7 +201,7 @@ function displayWordData(wordData) {
         `;
       });
       
-      synonymsHtml += `</div>`;
+      synonymsHtml += </div>;
       synonymsDiv.innerHTML = synonymsHtml;
       meaningSection.appendChild(synonymsDiv);
     }
@@ -246,7 +241,7 @@ function showLoading(isLoading) {
 
 function showNotFound(word) {
   notFoundState.style.display = 'block';
-  notFoundWord.textContent = `We couldn't find any definitions for "${word}"`;
+  notFoundWord.textContent = We couldn't find any definitions for "${word}";
 }
 
 function resetUI() {
@@ -324,4 +319,4 @@ function clearHistory() {
 }
 
 // Make fetchWordData globally accessible for onclick handlers
-window.fetchWordData = fetchWordData;
+window.fetchWordData = fetchWordData;
