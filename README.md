@@ -120,12 +120,16 @@ flowchart TD
 - The audio button appears only if a pronunciation is available.
 ---
    
-###👥 *Team Members*
-1.Saihajpreet Kaur
-2.Ranjot Kaur
-3.Ronit Khanna
-4.Om Aggarwal
+##👥 *Team Collaboration Summary*
+All team members actively contributed across UI design, functionality development, and issue resolution, ensuring a smooth and collaborative project execution.
+## 👥 *Team Member Roles*
 
+| Team Member           | Role and Contributions |
+|:----------------------|:------------------------|
+| *Saihajpreet Kaur*   | Coordinated overall project structure and contributed to the HTML structure, worked on CSS design, implemented parts of the JavaScript functionality, and actively resolved UI and logic-related issues. |
+| *Ranjot Kaur*        | Assisted in building HTML sections, styled components using CSS, added JavaScript functionalities, and helped in debugging and fixing design alignment problems. |
+| *Ronit Khanna*       | Worked on implementing search functionality and integrated parts of the Dictionary API responses in JavaScript, and participated in solving code-related issues. |
+| *Om Aggarwal*        | Helped in creating dynamic HTML sections, worked on CSS improvements, contributed to JavaScript code for interactivity, and supported in identifying and fixing technical bugs. |
 
 ###💡 *Future Improvements*
 
