@@ -191,7 +191,7 @@ function displayWordData(wordData){
         `;
       });
       
-      synonymsHtml += "</div>";
+      synonymsHtml += `</div>`;
       synonymsDiv.innerHTML = synonymsHtml;
       meaningSection.appendChild(synonymsDiv);
     }
