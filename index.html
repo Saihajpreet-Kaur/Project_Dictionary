@@ -11,7 +11,7 @@
   <!-- Main Wrapper -->
   <div class="container">
 
-    <!-- ====== Saihaj: Header Section ====== -->
+    
     <!-- Header -->
     <header>
       <h1>WordWave</h1>
@@ -19,26 +19,23 @@
     </header>
 
 
+       <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search for a word...">
+      <div class="search-actions">
+        <button id="history-btn" aria-label="Show search history">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+        </button>
+        <button id="mic-btn" aria-label="Search by voice">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/><path d="M8 22h8"/></svg>
+        </button>
+        <button id="search-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+    </div>
 
-    <!-- ====== Ronit: Search Section ====== -->
-    <!-- Add search input and buttons (search, mic, history) -->
-    <!-- Add history dropdown --><!-- ====== Ronit: Search Section ====== -->
-<div class="search-container">
-  <input type="text" id="search-input" placeholder="Search for a word...">
-  <div class="search-actions">
-    <button id="history-btn" aria-label="Show search history">
-      <!-- History SVG Icon -->
-    </button>
-    <button id="mic-btn" aria-label="Search by voice">
-      <!-- Mic SVG Icon -->
-    </button>
-    <button id="search-btn" aria-label="Search">
-      <!-- Search SVG Icon -->
-    </button>
-  </div>
-</div>
 
-<!-- ====== Ronit: History Dropdown ====== -->
 <div id="history-dropdown" class="history-dropdown">
   <div class="history-header">
     <h3>Recent Searches</h3>
@@ -53,16 +50,13 @@
 </div>
 
 
-<!-- ==== Ranjot: Word content section ==== -->
-<div class ="content-container">   
 
-<!-- ====== Ranjot: Loading and Not Found Section ====== -->
+<div class ="content-container">   
 <div class="loading-state" id="loading">
   <div class="loading-spinner"></div>
   <p>Looking up...</p>
 </div>
 
-<!-- ====== Ranjot: Not Found Section ====== -->
 <div class="not-found-state" id="not-found">
   <div class="not-found-animation"></div>
   <h2>Word Not Found</h2>
@@ -78,39 +72,40 @@
 </div>
 
 
+ <!-- Word Content -->
+      <div id="word-content" class="word-content">
+        <div class="word-header">
+          <div>
+            <h2 id="word-title"></h2>
+            <span id="word-phonetic" class="phonetic"></span>
+          </div>
+          <button id="play-audio" class="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+        </div>
 
 
-    <!-- ====== Om: Word Result and Source Section ====== -->
-    <!-- Add word title, phonetic, and play button -->
-       
-    <!-- Add source link and footer -->
-    <div id="word-content" class="word-content">
-  <div class="word-header">
-    <div>
-      <h2 id="word-title"></h2>
-      <span id="word-phonetic" class="phonetic"></span>
+        <div id="meanings-container" class="meanings-container">
+          <!-- Meanings will be added here dynamically -->
+        </div>
+
+        <!-- Source URLs -->
+        <div id="source-section" class="source-section">
+          <p>
+            Source:
+            <a id="source-url" href="#" target="_blank" rel="noopener noreferrer">
+              <span id="source-text"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              <footer>
+                <p>Credits: Dictionary App Project</p>
+            </footer>
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
-    <button  class="play-button">
-      <!-- Volume SVG Icon -->
-    </button>
-    
-  </div>
-
-  <div id="meanings-container" class="meanings-container">
-    <!-- Meanings will be added here dynamically -->
-  </div>
-
-  <div id="source-section" class="source-section">
-    <p>
-      Source:
-      <a id="source-url" href="#">
-        <span id="source-text"></span>
-      </a>
-    </p>
-  </div>
-</div>
-
   </div>
   <script src="script.js"></script>
 </body>
 </html>
+

@@ -4,17 +4,6 @@
   --background-secondary: #121212;
   --foreground: #ffffff;
   --primary: #9b87f5;
-
-  --primary-light: rgba(155, 135, 245, 0.3);
-  --primary-dark: #8B5CF6;
-  --gray-300: #D1D5DB;
-  --gray-400: #9CA3AF;
-  --gray-500: #6B7280;
-  --gray-600: #4B5563;
-  --gray-700: #374151;
-  --gray-800: #1F2937;
-  --radius: 1rem;
-  
   --primary-light: rgba(155, 135, 245, 0.2);
   --primary-dark: #8B5CF6;
   --gray-300: #D1D5DB;
@@ -28,12 +17,12 @@
   --animation-duration: 0.3s;
 }
 ================================ 
-{
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-  }
+       }
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -201,9 +190,21 @@
     list-style: none;
     padding: 0.25rem 0;
   }
+
   #history-list li button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
+  }
+  #history-list li button {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--gray-300);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
   }
   
   #history-list li svg {
@@ -474,4 +475,69 @@
   .source-section svg {
     margin-left: 0.25rem;
   }
-
+/* Animation Class */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+ /* Media Queries */
+  @media (max-width: 640px) {
+    body {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .search-container {
+      margin-bottom: 1.5rem;
+    }
+  
+    #search-input {
+      padding: 0.75rem 1rem;
+      padding-right: 7rem;
+    }
+  
+    .word-header {
+      padding: 1rem;
+    }
+  
+    #word-title {
+      font-size: 1.5rem;
+    }
+  
+    .phonetic {
+      font-size: 1rem;
+    }
+  
+    .play-button {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .meanings-container {
+      padding: 1rem;
+    }
+  
+    .source-section {
+      padding: 0 1rem 1rem;
+    }
+  }
+ /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(146, 113, 240, 0.4);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(146, 113, 240, 0.6);
+  }
+  

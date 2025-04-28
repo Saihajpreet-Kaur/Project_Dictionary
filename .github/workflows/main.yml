@@ -1,0 +1,10 @@
+name: Greetings
+
+on: [pull_request]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on pull request
+        run: echo "Welcome to the project! Thanks for contributing."
