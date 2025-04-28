@@ -1,4 +1,4 @@
-# 🌟 WordWave – Modern Dictionary Application
+## 🌟 WordWave – Modern Dictionary Application.
 
 ## **📘 Overview**
 
