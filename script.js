@@ -23,6 +23,10 @@ let currentAudio = null;
 let searchHistory = JSON.parse(localStorage.getItem('wordwave_history')) || [];
 
 // Initialize speech recognition
+if (!('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
+  alert('Speech Recognition is not supported by this browser.');
+  return;
+}
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 let recognition = null;
 
