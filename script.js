@@ -201,6 +201,7 @@ function displayWordData(wordData) {
           >${synonym}</button>
         `;
       });
+      
       synonymsHtml += `</div>`;
       synonymsDiv.innerHTML = synonymsHtml;
       meaningSection.appendChild(synonymsDiv);
