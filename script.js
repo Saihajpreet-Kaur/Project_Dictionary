@@ -1,3 +1,4 @@
+
 // DOM Elements
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
@@ -201,7 +202,7 @@ function displayWordData(wordData) {
         `;
       });
       
-      synonymsHtml += </div>;
+      synonymsHtml += `</div>`;
       synonymsDiv.innerHTML = synonymsHtml;
       meaningSection.appendChild(synonymsDiv);
     }
@@ -241,7 +242,7 @@ function showLoading(isLoading) {
 
 function showNotFound(word) {
   notFoundState.style.display = 'block';
-  notFoundWord.textContent = We couldn't find any definitions for "${word}";
+  notFoundWord.textContent = `We couldn't find any definitions for "${word}"`;
 }
 
 function resetUI() {
@@ -319,4 +320,4 @@ function clearHistory() {
 }
 
 // Make fetchWordData globally accessible for onclick handlers
-window.fetchWordData = fetchWordData;
+window.fetchWordData = fetchWordData;
